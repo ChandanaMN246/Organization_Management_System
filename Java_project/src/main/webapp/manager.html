@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ChanSrave's org</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+
+  .container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Manager Registration Form</h1>
+    <form action="manager" method="GET">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="manager_id">Manager ID:</label>
+      <input type="text" id="manager_id" name="manager_id" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="team_members">Team Members:</label>
+      <input type="text" id="team_member1" name="team_members1" required>
+      <input type="text" id="team_member2" name="team_members2">
+      <input type="text" id="team_member3" name="team_members3">
+
+      <label for="current_project">Current Project:</label>
+      <input type="text" id="current_project" name="current_project" required>
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ChanSrave's org</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 400px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .button-group button {
+      flex: 1;
+      margin: 0 5px;
+    }
+     .logout {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+<br>
+
+<a class="logout" href="logOutServlet">Logout</a>
+
+  <div class="container">
+    <h1>Welcome to ChanSrave's organition</h1>
+    <p id="datetime"></p>
+    <div>
+      <label for="hr">HR:</label>
+      <div class="button-group">
+        <button onclick="location.href='hr.html'">Add New</button>
+        <button onclick="location.href='hrdelete.html'">Delete</button>
+        <button onclick="location.href='hrdisplay'">Show Record</button>
+      </div>
+    </div>
+    <div>
+      <label for="manager">Manager:</label>
+      <div class="button-group">
+        <button onclick="location.href='manager.html'">Add New</button>
+        <button onclick="location.href='managerdelete.html'">Delete</button>
+        <button onclick="location.href='managerdisplay'">Show Record</button>
+      </div>
+    </div>
+    <div>
+      <label for="employee">Employee:</label>
+      <div class="button-group">
+        <button onclick="location.href='emp.html'">Add New</button>
+        <button onclick="location.href='empdelete.html'">Delete</button>
+        <button onclick="location.href='empdisplay'">Show Record</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to get the current date and time
+    function getDateTime() {
+      var today = new Date();
+      var date = today.toDateString();
+      var time = today.toLocaleTimeString();
+      return date + " " + time;
+    }
+
+    // Update the datetime element with the current date and time
+    var datetimeElement = document.getElementById("datetime");
+    if (datetimeElement) {
+      datetimeElement.innerHTML = getDateTime();
+    }
+  </script>
+</body>
+</html>
